@@ -126,10 +126,45 @@
       from { transform: scale(.96); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
+
+    /* LOADING CIRCLE */
+    /* 🔄 LOADING SCREEN */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #ffeef6, #ffd6e7);
+  display: grid;
+  place-items: center;
+  z-index: 10000;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 59, 122, 0.25);
+  border-top-color: #ff3b7a;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+/* 🔄 END LOADING SCREEN */
   </style>
 </head>
   
 <body>
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  
   <!-- Entry Button -->
   <button id="enter-site">Load Site</button>
   
@@ -340,8 +375,14 @@
     enterButton.style.display = "none";
   });
 </script>
+<script>
+  window.addEventListener("load", () => {
+    document.getElementById("loader").classList.add("hidden");
+  });
+</script>  
 </body>
 </html>
+
 
 
 
