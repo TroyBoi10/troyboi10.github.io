@@ -41,7 +41,7 @@
     }
 
     .card {
-      width: min(720px, 92vw);
+      width: min(1080px, 92vw);
       padding: 26px 22px;
       background: var(--card);
       backdrop-filter: blur(10px);
@@ -87,7 +87,7 @@
     }
 
     #yesBtn {
-      align: centre;
+      place-items: centre;
       background: var(--yes);
       color: #fff;
     }
@@ -156,7 +156,9 @@
   <canvas id="confettiCanvas"></canvas>
 
   <main class="card">
+  <section id="maincontentbox">
     <!-- ANIMAL WITH HEART -->
+    <img src="tulip.png">
     <svg class="art" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="fur" x1="0" x2="1">
@@ -195,6 +197,7 @@
     </svg>
 
     <h1>niks will you be my valentine?</h1>
+  </section>
 
     <section class="button-zone" id="zone">
       <button id="yesBtn">Yes</button>
@@ -367,27 +370,10 @@
       zone.style.display = "none";
       hint.style.display = "none";     // HIDE THE HINT
       result.style.display = "block";
+      maincontentbox.style.display = "none";
       resizeConfettiCanvas();
       fullScreenConfetti();
     });
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
