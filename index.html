@@ -134,7 +134,7 @@
 
   <main class="card">
 
-    <!-----MUSIC-->
+    <!-----MUSIC--!>
     <button id="play-music">Enter Site</button>
     <audio id="bg-music" loop>
       <source src="https://github.com/TroyBoi10/troyboi10.github.io/blob/main/background-music.mp3" type="audio/mpeg">
@@ -258,6 +258,20 @@
   </main>
 
   <script> 
+
+  <!----MUSIC-----!>
+  const enterButton = document.getElementById("enter-site");
+  const bgMusic = document.getElementById("bg-music");
+
+  enterButton.addEventListener("click", () => {
+    bgMusic.play().catch(err => {
+      console.log("Autoplay blocked:", err);
+    });
+
+    // Optional: hide button after click
+    enterButton.style.display = "none";
+  });
+  
     const zone = document.getElementById("zone");
     const yesBtn = document.getElementById("yesBtn");
     const noBtn = document.getElementById("noBtn");
@@ -366,6 +380,7 @@
   </script>
 </body>
 </html>
+
 
 
 
