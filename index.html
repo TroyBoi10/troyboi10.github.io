@@ -129,6 +129,20 @@
   </style>
 </head>
 
+<script>
+  const enterButton = document.getElementById("enter-site");
+  const bgMusic = document.getElementById("bg-music");
+
+  enterButton.addEventListener("click", () => {
+    bgMusic.play().catch(err => {
+      console.log("Autoplay blocked:", err);
+    });
+
+    // Optional: hide button after click
+    enterButton.style.display = "none";
+  });
+</script>
+  
 <body>
   <canvas id="confettiCanvas"></canvas>
 
@@ -239,15 +253,6 @@
 
     <!-- HINT -->
     <div class="hint" id="hint">Don't be shy 😈</div>
-
-    <section class="result" id="result">
-      <h2>YAY! 🎉</h2>
-      <img
-        class="fireworks"
-        src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif"
-        alt="Fireworks"
-      />
-    </section>
   </main>
 
   <script>  
@@ -359,6 +364,7 @@
   </script>
 </body>
 </html>
+
 
 
 
