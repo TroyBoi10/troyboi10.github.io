@@ -138,7 +138,7 @@
   #loader {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at top, #ffeef6, #ffd6e7);
+  background: rgba(0,0,0,0.4);
   display: grid;
   place-items: center;
   z-index: 10000;
@@ -382,11 +382,17 @@
 </script>
 <script>
   window.addEventListener("load", () => {
-    document.getElementById("loader").classList.add("hidden");
+    const loader = document.getElementById("loader");
+
+    // ensure it shows for at least 500ms
+    setTimeout(() => {
+      loader.classList.add("hidden");
+    }, 500);
   });
 </script>  
 </body>
 </html>
+
 
 
 
