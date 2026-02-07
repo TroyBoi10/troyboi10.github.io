@@ -260,6 +260,7 @@
   <script> 
 
   <!----MUSIC-----!>
+  <script>
   const enterButton = document.getElementById("enter-site");
   const bgMusic = document.getElementById("bg-music");
 
@@ -267,6 +268,11 @@
     bgMusic.play().catch(err => {
       console.log("Autoplay blocked:", err);
     });
+
+    // Optional: hide button after click
+    enterButton.style.display = "none";
+  });
+</script>
 
     // Optional: hide button after click
     enterButton.style.display = "none";
@@ -380,6 +386,7 @@
   </script>
 </body>
 </html>
+
 
 
 
