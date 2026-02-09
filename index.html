@@ -139,7 +139,7 @@
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.4);
-  display: grid;
+  display: none;
   place-items: center;
   z-index: 10000;
   transition: opacity 0.4s ease, visibility 0.4s ease;
@@ -455,7 +455,7 @@
     });
   </script>
 
-  /* -------- MUSIC CLICKED ------- */
+  <!-- -------- MUSIC CLICKED ------- -->
   <script>
   const enterButton = document.getElementById("enter-site");
   const bgMusic = document.getElementById("bg-music");
@@ -470,7 +470,8 @@
   });
 </script>
 
-/* ---------- ENVELOPE CLICK ---------- */
+<!-- -------- ENVELOPE CLICKED ------- -->
+
 <script>
   const openBtn = document.getElementById("openEnvelope");
   const envelope = document.getElementById("envelope");
@@ -490,7 +491,7 @@
   });
 </script>
 
- /* ---------- LOADING CIRCLE ---------- */ 
+ <!-- ---------- LOADING CIRCLE ---------- -->
 <script>
   window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
@@ -503,6 +504,7 @@
 </script>  
 </body>
 </html>
+
 
 
 
